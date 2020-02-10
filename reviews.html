@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Details</title>
+        <style>
+            .container {
+                margin-left: 160px;
+                margin-top: 42px;
+            }
+            .products {
+                float: left;
+                height : 440px;
+                width : 300px;
+                border : 1px solid black;
+                margin-right: 48px;
+            }
+
+            h2, h3 {
+                padding-left: 16px;
+            }
+
+            img {
+                height: 200px;
+                width : 300px;
+            }
+
+            input {
+                margin-top: 16px;
+                height: 30px;
+                width: 260px;
+                margin-left: 16px;
+            }
+
+            label {
+                color: blue;
+                margin-left: 16px;
+                font-size: 20px;
+            }
+
+            .btn-submit {
+                margin-top: 54px;
+                margin-right: 600px;
+                margin-left: 600px;
+                height: 52px;
+                width: 140px;
+                background-color : royalblue;
+                color: white;
+                font-size: 14px;
+            }
+
+            .btn-submit :hover {
+                height: 72px;
+                width: 160px;
+            }
+        </style>
+
+        <script>
+            function submitReview() {
+                let laptopRev = document.getElementById('laptopReview').value;
+                let mobileRev = document.getElementById('mobileReview').value;
+                let watchRev = document.getElementById('watchReview').value;
+
+                if(laptopRev.length === 0 || mobileRev.length === 0 || watchRev.length === 0) {
+                    alert('Please fill all the reviews!');
+                } else {
+                    alert('Thank You!');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Order Summary</h1>
+        <div class="container">
+                <div class="products">
+                        <img src="laptop.jpg" alt="Laptop" onclick="review()"><br>
+                        <h2>Macbook</h2><br>
+                        <h3>Delivery Date : 12 December 2019</h3>
+                        <label>Enter your review below</label><br>
+                        <input type="text" id="laptopReview">
+                    </div>
+                    <div class="products">
+                        <img src="mobile.jpg" alt="Mobile" onclick="review()"><br>
+                        <h2>iPhone</h2><br>
+                        <h3>Delivery Date : 28 November 2019</h3>
+                        <label>Enter your review below</label><br>
+                        <input type="text" id="mobileReview">
+                    </div>
+                    <div class="products">
+                        <img src="watch.jpg" alt="Watch" onclick="review()"><br>
+                        <h2>Apple Watch</h2><br>
+                        <h3>Delivery Date : 07 December 2019</h3>
+                        <label>Enter your review below</label><br>
+                        <input type="text" id="watchReview">
+                    </div>
+        </div>
+        <h1><button class="btn-submit" type="button" onclick="submitReview()">Submit Reviews</button></h1>
+    </body>
+</html>

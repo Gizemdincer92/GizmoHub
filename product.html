@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Details</title>
+        <style>
+            .container {
+                margin-left: 160px;
+                margin-top: 42px;
+            }
+            .products {
+                float: left;
+                height : 350px;
+                width : 300px;
+                border : 1px solid black;
+                margin-right: 48px;
+            }
+
+            h2, h3 {
+                padding-left: 16px;
+            }
+
+            img {
+                height: 200px;
+                width : 300px;
+            }
+        </style>
+
+        <script>
+            function review() {
+                window.open('reviews.html');
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Product Details</h1>
+        <div class="container">
+                <div class="products">
+                        <img src="laptop.jpg" alt="Laptop" onclick="review()"><br>
+                        <h2>Macbook</h2><br>
+                        <h3>Delivery Date : 12 December 2019</h3>
+                    </div>
+                    <div class="products">
+                        <img src="mobile.jpg" alt="Mobile" onclick="review()"><br>
+                        <h2>iPhone</h2><br>
+                        <h3>Delivery Date : 28 November 2019</h3>
+                    </div>
+                    <div class="products">
+                        <img src="watch.jpg" alt="Watch" onclick="review()"><br>
+                        <h2>Apple Watch</h2><br>
+                        <h3>Delivery Date : 07 December 2019</h3>
+                    </div>
+        </div>
+    </body>
+</html>
